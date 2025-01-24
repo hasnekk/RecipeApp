@@ -1,6 +1,6 @@
 {
   "name": "Recipe Finder App",
-  "short_name": "Recipe APp",
+  "short_name": "Recipe App",
   "description": "App for finding and sharing fun recipes.",
   "start_url": "/",
   "display": "standalone",
