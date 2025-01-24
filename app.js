@@ -135,9 +135,6 @@ async function showRecipe(title) {
 
   if (selectedRecipe) {
     recipeSection.innerHTML = `
-        <button onclick="navigateTo('#addRecipe')" class="add-recipe-button">
-          +
-        </button>
         <img src="${selectedRecipe.image}" alt="recipe image" />
         <div class="recipe-info">
           <p class="recipe-name">${selectedRecipe.title}</p>
