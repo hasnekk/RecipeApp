@@ -1,0 +1,25 @@
+header {
+  width: 100%;
+  min-height: 4rem;
+  padding: 0 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: gold;
+}
+
+/**/
+footer {
+  width: 100%;
+
+  flex: 0.3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header-footer.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/add-recipe.css" />
+    <link rel="stylesheet" href="./css/recipe.css" />
+
+    <title>Recipe Hub</title>
+  </head>
+  <body>
+    <header>
+      <button onclick="navigateTo('#home')">Home</button>
+      <h3>Quick Recipe Finder</h3>
+      <button id="install-btn">Install App</button>
+    </header>
+
+    <main>
+      <section id="home">
+        <span class="home-overlay"></span>
+        <ul id="recipe-list"></ul>
+      </section>
+
+      <section id="addRecipe" style="display: none">
+        <div class="form-container">
+          <h1>Create Recipe</h1>
+          <form id="recipe-form">
+            <label for="recipe-title">Title:</label>
+            <input
+              type="text"
+              id="recipe-title"
+              name="title"
+              placeholder="Enter recipe title"
+              required
+            />
+
+            <label for="recipe-description">Description:</label>
+            <textarea
+              id="recipe-description"
+              name="description"
+              placeholder="Enter recipe description"
+              required
+            ></textarea>
+
+            <label for="recipe-image">Image:</label>
+            <input
+              type="file"
+              id="recipe-image"
+              name="image"
+              accept="image/*"
+              capture="camera"
+              required
+            />
+
+            <label for="recipe-ingredients">Ingredients:</label>
+            <textarea
+              id="recipe-ingredients"
+              name="ingredients"
+              placeholder="Enter ingredients (separate with commas)"
+              required
+            ></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="recipe" style="display: none"></section>
+
+      <button onclick="navigateTo('#addRecipe')" class="add-recipe-button">
+        +
+      </button>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
+;

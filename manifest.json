@@ -1,0 +1,15 @@
+{
+  "name": "Recipe Finder App",
+  "short_name": "Recipe APp",
+  "description": "App for finding and sharing fun recipes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "cookie.svg",
+      "sizes": "any"
+    }
+  ]
+}
