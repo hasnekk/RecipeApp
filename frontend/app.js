@@ -75,7 +75,9 @@ function convertImageToBase64(file) {
 
 async function fetchRecipes() {
   try {
-    const response = await fetch("http://localhost:3000/recipes");
+    const response = await fetch(
+      "https://recipeapp-server-4a6j.onrender.com/recipes"
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -200,10 +202,13 @@ function registerSubmit() {
 
       if (image) {
         try {
-          const response = await fetch("http://localhost:3000/recipes", {
-            method: "POST",
-            body: formData,
-          });
+          const response = await fetch(
+            "https://recipeapp-server-4a6j.onrender.com/recipes",
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
 
           const result = await response.json();
           if (response.ok) {

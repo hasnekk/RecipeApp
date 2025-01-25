@@ -28,8 +28,12 @@ self.addEventListener("install", (event) => {
 //#region fetching
 self.addEventListener("fetch", (event) => {
   if (
-    (event.request.url.includes("http://localhost:3000/recipes") ||
-      event.request.url.includes("http://localhost:3000/uploads")) &&
+    (event.request.url.includes(
+      "https://recipeapp-server-4a6j.onrender.com/recipes"
+    ) ||
+      event.request.url.includes(
+        "https://recipeapp-server-4a6j.onrender.com/uploads"
+      )) &&
     event.request.method !== "POST"
   ) {
     event.respondWith(
@@ -125,10 +129,13 @@ async function syncRecipes() {
         formData.append("image", request.imageUrl);
       }
 
-      const response = await fetch("http://localhost:3000/recipes", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://recipeapp-server-4a6j.onrender.com/recipes",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
         await removeFailedRequest(request.id);
