@@ -88,6 +88,8 @@ app.get('/recipes', (req, res) => {
   const protocol = req.protocol;
   const host = req.get('host');
 
+  console.log(protocol);
+
   recipes = recipes.map((recipe) => ({
     ...recipe,
     image: `${protocol}://${host}/uploads/${recipe.image}`
@@ -95,6 +97,21 @@ app.get('/recipes', (req, res) => {
 
   return res.status(200).json(recipes);
 });
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+  process.exit(1); // Exit to avoid undefined state
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+app.use((err, req, res, next) => {
+  console.error('Global Error Handler:', err.stack); // Log the error stack trace
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
 
 // Start the server
 if (externalUrl) {
