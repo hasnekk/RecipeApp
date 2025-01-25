@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
 
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 
   background-color: rgba(0, 0, 0, 0.1);
@@ -31,10 +31,12 @@
 }
 
 .recipe-info {
-  position: relative;
+  position: absolute;
+  top: 35%;
   margin: 0 5%;
   padding: 15px 10px;
   min-height: 250px;
+  width: 90%;
   border-radius: 15px;
   background-color: #ffffff;
 
@@ -45,7 +47,6 @@
 
   row-gap: 1rem;
 
-  margin-top: -50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .recipe-name {

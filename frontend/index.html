@@ -48,15 +48,32 @@
               required
             ></textarea>
 
-            <label for="recipe-image">Image:</label>
+            <label for="recipe-image"
+              >Image: <span id="image-name"></span>
+            </label>
             <input
               type="file"
               id="recipe-image"
               name="image"
               accept="image/*"
-              capture="camera"
-              required
+              hidden
             />
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <button onclick="takeFile()" type="button" style="flex: 1">
+                Add File
+              </button>
+              <br />
+              <button onclick="takeImage()" type="button" style="flex: 1">
+                Take Image
+              </button>
+            </div>
 
             <label for="recipe-ingredients">Ingredients:</label>
             <textarea
@@ -78,7 +95,31 @@
       </button>
     </main>
 
-    <script type="module" src="/app.js"></script>
+    <div class="video" style="display: none">
+      <video id="camera-stream" autoplay></video>
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-brilliance"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="image" style="display: none">
+      <canvas id="camera-canvas"></canvas>
+      <div class="canvas-btns">
+        <button id="accept-btn">Save</button>
+        <button id="discard-btn">Discard</button>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
   </body>
 </html>
-;

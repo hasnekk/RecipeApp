@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "Cookies",
+    "description": "A delicious classic chocolate chip cookie recipe with a perfect balance of sweetness and chewy texture. These cookies are great for any occasion, whether you're baking for a special event or just craving a treat.",
+    "ingredients": [
+      "1 cup butter, softened",
+      "1 cup white sugar",
+      "1 cup packed brown sugar",
+      "2 eggs",
+      "1 teaspoon vanilla extract",
+      "2 1/2 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "2 cups semisweet chocolate chips"
+    ],
+    "image": "cookie.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Wok Meal",
+    "description": "A savory stir-fry meal with tender chicken, fresh vegetables, and flavorful sauces. Quick and easy to make, this wok meal is packed with flavor and perfect for a satisfying dinner or lunch.",
+    "ingredients": [
+      "2 tablespoons vegetable oil",
+      "1 chicken breast, sliced",
+      "1 bell pepper, sliced",
+      "1 carrot, julienned",
+      "1/2 onion, sliced",
+      "2 cloves garlic, minced",
+      "1 tablespoon soy sauce",
+      "1 tablespoon oyster sauce",
+      "1 tablespoon hoisin sauce",
+      "1/2 cup chicken broth",
+      "1 teaspoon sesame oil",
+      "2 cups cooked rice"
+    ],
+    "image": "wok.jpg"
+  }
+]
