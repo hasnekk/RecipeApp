@@ -85,7 +85,7 @@ app.get('/recipes', (req, res) => {
   const data = fs.readFileSync(recipesFilePath);
   let recipes = JSON.parse(data);
 
-  const protocol = req.protocol;
+  const protocol = req.get('X-Forwarded-Proto') || req.protocol;
   const host = req.get('host');
 
   console.log(protocol);
